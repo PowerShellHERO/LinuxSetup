@@ -1,8 +1,6 @@
 
 # LinuxSetup
 
-TEST
+Chmod 755 ~/LinuxSetup/import.sh
 
-TEST2
-
-TEST3 from ArchLinux ssh!
+then run.
