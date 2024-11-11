@@ -40,7 +40,7 @@ set wrapscan
 " edit vimrc
 " let mapleader = "\<Space>"
 noremap <Space>o :edit $MYVIMRC<CR>
-autocmd FileType vim noremap <buffer> <Leader>e :source %<CR>
+autocmd FileType vim noremap <buffer> <Space>e :source %<CR>
 " write, quit
 nnoremap <Space>w :<c-u>w<CR>
 nnoremap <Space>q :<c-u>bdel<CR>
@@ -85,7 +85,7 @@ noremap! <C-o> <Esc>
 vnoremap <C-o> <ESC>
 inoremap <C-c> <C-o>
 nnoremap <C-c> <C-o>
-nnoremap o o<Esc>o　
+nnoremap o o<Esc>o
 noremap <C-h> I
 
 nnore gt :bnext<CR>

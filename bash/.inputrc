@@ -1,0 +1,24 @@
+
+$if Bash
+	set completion-ignore-case on
+$endif
+
+
+set bell-style none
+
+# basic Key binding
+
+## swap <C-a> and <C-u>
+"\C-a": unix-line-discard
+"\C-u": beginning-of-line
+"\C-o": beginning-of-line
+"\C-j": beginning-of-line
+
+"\C-k": previous-history
+"\C-h": backward-char
+"\C-d": backward-delete-char
+"\C-l": forward-char
+"\C-g": delete-char
+"\C-e": end-of-line
+"\C-z": undo
+
