@@ -1,6 +1,7 @@
 
 $if Bash
 	set completion-ignore-case on
+	set editing-mode vi
 $endif
 
 
@@ -10,15 +11,39 @@ set bell-style none
 
 ## swap <C-a> and <C-u>
 "\C-a": unix-line-discard
-"\C-u": beginning-of-line
 "\C-o": beginning-of-line
 "\C-j": beginning-of-line
 
-"\C-k": previous-history
+"\C-k": history-search-backward
+"\C-n": history-search-forward
 "\C-h": backward-char
 "\C-d": backward-delete-char
 "\C-l": forward-char
 "\C-g": delete-char
 "\C-e": end-of-line
 "\C-z": undo
+
+# vim-mode
+$if mode=vi
+	set keymap vi-insert
+	"\C-o": vi-movement-mode
+	"\C-k": history-search-backward
+	"\C-n": history-search-forward
+	"\C-a": unix-line-discard
+	"\C-u": beginning-of-line
+	"\C-u": "\C-o\C-h"
+
+	set keymap vi-command
+	# "k": history-search-backward
+	# "n": history-search-forward
+	"\C-h": vi-insert-beg
+	"\C-l": vi-append-eol
+$endif
+
+# complate
+
+set show-all-if-ambiguous on
+set colored-stats on
+set mark-symlinked-directories on
+
 
